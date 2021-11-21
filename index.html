@@ -28,8 +28,8 @@
             <hr>
             <ul class="nav nav-pills flex-column mb-auto align-items-center" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="one-tab" data-bs-toggle="tab" data-bs-target="#one" type="button"
-                        role="tab" aria-controls="one" aria-selected="true">Exercício 1</button>
+                    <button id="refresh" class="nav-link" id="one-tab" data-bs-toggle="tab" data-bs-target="#one"
+                        type="button" role="tab" aria-controls="one" aria-selected="true">Exercício 1</button>
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link " id="two-tab" data-bs-toggle="tab" data-bs-target="#two" type="button"
@@ -38,6 +38,22 @@
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="three-tab" data-bs-toggle="tab" data-bs-target="#three" type="button"
                         role="tab" aria-controls="three" aria-selected="false">Exercício 3</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="four-tab" data-bs-toggle="tab" data-bs-target="#four" type="button"
+                        role="tab" aria-controls="four" aria-selected="false">Exercício 4</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="five-tab" data-bs-toggle="tab" data-bs-target="#five" type="button"
+                        role="tab" aria-controls="five" aria-selected="false">Exercício 5</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="six-tab" data-bs-toggle="tab" data-bs-target="#six" type="button"
+                        role="tab" aria-controls="six" aria-selected="false">Exercício 6</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="seven-tab" data-bs-toggle="tab" data-bs-target="#seven" type="button"
+                        role="tab" aria-controls="six" aria-selected="false">Exercício 7</button>
                 </li>
 
             </ul>
@@ -110,7 +126,7 @@
                 </div>
 
                 <div class="tab-pane container fade" id="three" role="tabpanel" aria-labelledby="three-tab">
-                
+
                     <!-- Modal -->
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">
@@ -211,17 +227,75 @@
                         <button type="submit" value="" id="mul" class="btn btn-secondary">Multiply</button>
                         <button type="submit" value="" id="div" class="btn btn-secondary">Divide</button>
                     </div>
-
                     <div id="resultado"></div>
-
                 </div>
 
 
-               
+                <div class="tab-pane fade" id="five" role="tabpanel" aria-labelledby="five-tab">
+                    <div class="container p-5">
+                        <p>
+                            Precisamos verificar se uma pessoa pode se aposentar com base na idade. Utilize a condicional
+                            if else para verificar se a variável idade é maior que 65 e imprima uma mensagem para cada
+                            caso:
+                        <ul>
+                            <li>Condição verdadeira : “Você já pode se aposentar”</li>
+                            <li>Condição falsa: “Você ainda não pode se aposentar”</li>
+                        </ul>
+                        </p>
 
-                <div class="tab-pane fade" id="six" role="tabpanel" aria-labelledby="three-tab"></div>
-                <div class="tab-pane fade" id="seven" role="tabpanel" aria-labelledby="three-tab"></div>
-                <div class="tab-pane fade" id="eight" role="tabpanel" aria-labelledby="three-tab"></div>
+                        <form class="mb-5">
+                            <div class="row">
+                                <div class="col">
+                                    <input type="number" class="form-control" name="age" placeholder="First number">
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="d-flex justify-content-center btn-group" role="group" aria-label="Basic example">
+                            <button type="submit" value="" id="btn5" class="btn btn-secondary">Verificar</button>
+                        </div>
+                        <div id="aposenta"></div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="six" role="tabpanel" aria-labelledby="six-tab">
+                    <div class="mt-5">
+                        <p> <b>2-</b> Precisamos de um código que verifique a idade do usuário para ver se já 
+                            tem idade mínima para adquirir carta de habilitação. Para isso, teremos uma variável
+                            nome que guarda um valor do tipo string, e uma variável idade que guarda um valor do 
+                            tipo numérico. O sistema deve cumprimentar o usuário independente da idade, o resultado
+                            seria assim: Caso o usuário tenha idade mínima para dirigir imprima:
+                        </p>
+
+                        <form class="mb-5">
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                                </div>
+                                <div class="col">
+                                    <input type="number" class="form-control" id="agecnh" name="ageCNH" placeholder="Age">
+                                </div>
+                            </div>
+                        </form>
+
+                        <button id="btn6" class="btn btn-primary mt-4">Verificar</button>
+                        <div id="cnh"></div>
+                    </div>
+                </div>
+
+                <div class="container tab-pane" id="seven" role="tabpanel" aria-labelledby="seven-tab">
+                   <p>
+                    Precisamos criar um código que ajude os usuários a saber se pode ir ao banco. Sabemos que o banco está aberto em todos os os dias da semana, exceto em finais de semana. Caso o usuário possa ir ao banco você deve exibir com console.log a seguinte mensagem: “Você pode ir ao banco”, caso contrário, ‘O banco está fechado, tente outro dia’ Para esse exercício leve em consideração as seguintes informações:
+                    <ul>
+                        <li>Dias da semana pro sistema: segunda, terca, quarta, quinta, sexta, sabado e domingo.</li>
+                        <li>Você terá a seguinte variável no código: diaSemana</li>
+                        <li>Para esse exercício você deve usar na condição do if o operador && para juntar as condições lógicas junto ao operador diferente de(!=).</li>
+                    </ul>  
+                </p>
+
+                
+
+                </div>
             </div>
         </div>
     </main>

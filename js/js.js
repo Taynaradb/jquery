@@ -80,3 +80,15 @@ $('#btn5').click(function(){
   $('#aposenta').html(alert);
 
 });
+
+$('#btn6').click(function(){
+  var name = $('#name').val();
+  var age = parseInt($('#agecnh').val());
+
+  if(age >= 18){
+  $('#cnh').html('Ola, <span class="fw-bold">'+ name +'. Você passou no nosso teste e já pode dirigir!</span>');
+  }else{
+    $('#cnh').html('Ola, <span class="fw-bold">'+ name +'. Você não tem idade o suficiente para dirigir.</span>');
+
+  }
+})
